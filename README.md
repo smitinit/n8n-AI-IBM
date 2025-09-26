@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌱 GreenGuardian – AI Agent for Sustainable Product Insight
 
-## Getting Started
+**GreenGuardian** is an AI-powered web solution that promotes **sustainable consumption** by analyzing consumer product data and recommending **eco-friendly alternatives**. The system combines **automation (n8n workflows)**, **AI reasoning (Gemini model)**, and **open data (Open Food Facts API)** to provide **real-time sustainability scores** and actionable insights.
 
-First, run the development server:
+## Here are some glimps of GreenGuradian
+![product details form](public/image-1.png)
+![result](public/image-2.png)
+![n8n workflow](public/image.png)
+![google data sheet](public/image-3.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
+- **Real-time Sustainability Scoring** – Evaluates packaging, ingredients, and certifications.
+- **AI-based Product Analysis** – Uses Gemini reasoning for structured evaluation.
+- **Eco-friendly Alternatives** – Suggests greener substitutes for consumer products.
+- **Open Data Integration** – Powered by Open Food Facts API for transparency.
+- **Scalable & Integration-ready** – Easily connects with any frontend.
+- **Educational & Consumer-friendly** – Encourages responsible consumption in line with SDG 12.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## ⚙️ Tech Stack
+- **Frontend:** Next.js
+- **Backend:** n8n (No-code workflow automation)
+- **AI Model:** Gemini (via API)
+- **APIs:** Open Food Facts, Gemini
+- **Hosting (recommended):** Vercel (frontend), n8n cloud / self-hosted instance (backend)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📊 Workflow Example
 
-## Deploy on Vercel
+1. User submits product details through the frontend form.
+2. n8n receives the webhook and queries the Open Food Facts API for product metadata.
+3. The fetched data (packaging, ingredients, labels) is passed to the Gemini model for evaluation.
+4. Output returned to frontend:
+   - **Sustainability Score** (numeric or categorical)
+   - **Impact Summary** (human-readable reasoning)
+   - **Alternative Suggestions** (linked to greener products)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 📚 References
+- UN SDG 12 – Responsible Consumption & Production
+- Open Food Facts API: https://world.openfoodfacts.org/data
+- n8n Documentation: https://docs.n8n.io/
+
+
+
+## 🤝 Contributing
+Contributions and improvements are welcome. Please fork the repo, create a feature branch, and submit a pull request. Include descriptive commits and tests where applicable.
+
+
+
+## 📜 License
+MIT License © 2025 Smit Patel

@@ -25,6 +25,7 @@ import {
   CheckCircle,
   Lightbulb,
 } from "lucide-react";
+import { n8n_URL } from "@/lib/config";
 
 const formSchema = z.object({
   product: z.string().min(2, {
@@ -57,8 +58,6 @@ export type SustainabilityResult = {
     summary: string;
   };
 };
-const url =
-  "https://smitinit.app.n8n.cloud/webhook/c7d02d28-7c7e-4b30-adac-9256ee142cb6";
 
 export default function ProductForm({ userId }: { userId: string }) {
   const [result, setResult] = useState<SustainabilityResult[] | null>(null);
@@ -84,7 +83,7 @@ export default function ProductForm({ userId }: { userId: string }) {
     };
 
     try {
-      const response = await fetch(url, {
+      const response = await fetch(n8n_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

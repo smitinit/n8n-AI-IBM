@@ -1,0 +1,1 @@
+export const n8n_URL = "https://smitinit.app.n8n.cloud/webhook/c7d02d28-7c7e-4b30-adac-9256ee142cb6"
