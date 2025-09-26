@@ -58,7 +58,7 @@ export type SustainabilityResult = {
   };
 };
 const url =
-  "https://smit935.app.n8n.cloud/webhook/c7d02d28-7c7e-4b30-adac-9256ee142cb6";
+  "https://smitinit.app.n8n.cloud/webhook/c7d02d28-7c7e-4b30-adac-9256ee142cb6";
 
 export default function ProductForm({ userId }: { userId: string }) {
   const [result, setResult] = useState<SustainabilityResult[] | null>(null);

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 const url =
-  "https://smit935.app.n8n.cloud/webhook/c7d02d28-7c7e-4b30-adac-9256ee142cb6";
+  "https://smitinit.app.n8n.cloud/webhook/c7d02d28-7c7e-4b30-adac-9256ee142cb6";
 
 export default async function RootLayout({
   children,
@@ -39,9 +39,16 @@ export default async function RootLayout({
   const id = await getCurrentUserId();
   if (!id) throw new Error("User not authenticated!");
 
-  const response = await fetch(url);
-  const data = await response.json();
-
+  const response = await fetch(url, {headers: { 'x-user-id': id }});
+  let data = [];
+try {
+  const json = await response.json();
+  // if it's not already an array, fall back to empty array
+  data = Array.isArray(json) ? json  : [];
+} catch {
+  data = [];
+}
+  console.log("Fetched data:", data);
   return (
     <ClerkProvider>
       <html lang="en">
